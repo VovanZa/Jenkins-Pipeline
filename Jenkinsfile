@@ -6,7 +6,14 @@ node {
 }
 
 stage ('Testing code') {
-}
+  parallel CucumberTests: {
+      test ('CucumberTests')
+  }, JUnitTests: {
+    test ('JUnit Tests')
+  }, Jacoco Tests: {
+    test ('IntegrationTest')
+  }
+ }
 
 stage ('Triggering job and fetching artefact after finishing'){
 }
