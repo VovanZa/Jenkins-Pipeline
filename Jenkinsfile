@@ -7,7 +7,15 @@ pipeline {
                                 echo "Preparation (Checking out)"
                         }
                 }
-
+                stage ('Testing code') {
+                        steps {
+                                echo "Testing code"
+                        }
+                }       
+                
+                stage ('Triggering job and fetching artefact after finishing') {
+                        echo "Triggering job and fetching artefact after finishing"
+                }
 
         }
 }
