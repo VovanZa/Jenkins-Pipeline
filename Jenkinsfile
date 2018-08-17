@@ -9,7 +9,8 @@ pipeline {
                 }
                 
                 stage ('Testing code') {
-                        parallel (
+                        steps {
+                                parallel (
                                 "CucumberTests": {
                                         echo "CucumberTests"
                                 },
@@ -19,7 +20,8 @@ pipeline {
                                 "JacocoTests": {
                                         echo "IntegrationTest"
                                 }
-                        )
+                                )
+                        }                     
                 }       
                 
                 stage ('Triggering job and fetching artefact after finishing') {
