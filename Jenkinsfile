@@ -19,6 +19,25 @@ pipeline {
                         }
                 }
 
+                stage ('Asking for manual approval') {
+                        steps {
+                                echo "Asking for manual approval"  
+                        }
+                }
+                stage ('Deployment') {
+                        steps {
+                                echo "Deployment"
+                        }
+                }
+
+                stage ('Sending status') {
+                        steps {
+                                echo "Sending status"
+                        }
+                }
+  }                
+                
+                
         }
 }
                
