@@ -9,9 +9,13 @@ pipeline {
                 }
                 
                 stage ('Testing code') {
-                        steps {
-                                echo "Testing code"
-                        }
+parallel CucumberTests: {
+        test ('CucumberTests')
+    }, JUnitTests: {
+      test ('JUnit Tests')
+    }, JacocoTests: {
+      test ('IntegrationTest')
+    }
                 }       
                 
                 stage ('Triggering job and fetching artefact after finishing') {
