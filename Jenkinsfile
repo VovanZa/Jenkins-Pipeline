@@ -1,5 +1,9 @@
 #!/usr/bin/env groovy
 
+stage ('Preparation (Checking out)') {
+  echo "Preparation (Checking out)"
+}
+
 node {
   stage('Building code') {
       echo "Building code"
