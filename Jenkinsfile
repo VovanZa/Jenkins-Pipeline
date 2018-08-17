@@ -29,8 +29,8 @@ pipeline {
     }
   }
 
-  def test(type) { 
-  }
+  //def test(type) { 
+  //}
 
   stage ('Triggering job and fetching artefact after finishing'){
     echo "Triggering job and fetching artefact after finishing"
