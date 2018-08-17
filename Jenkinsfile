@@ -14,7 +14,9 @@ pipeline {
                 }       
                 
                 stage ('Triggering job and fetching artefact after finishing') {
-                        echo "Triggering job and fetching artefact after finishing"
+                        steps {
+                                echo "Triggering job and fetching artefact after finishing"
+                        }
                 }
 
         }
