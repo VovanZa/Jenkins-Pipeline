@@ -7,6 +7,7 @@ pipeline {
                                 echo "Preparation (Checking out)"
                         }
                 }
+                
                 stage ('Testing code') {
                         steps {
                                 echo "Testing code"
@@ -24,6 +25,7 @@ pipeline {
                                 echo "Asking for manual approval"  
                         }
                 }
+                
                 stage ('Deployment') {
                         steps {
                                 echo "Deployment"
@@ -35,6 +37,8 @@ pipeline {
                                 echo "Sending status"
                         }
                 }
+        }
+        
   }                
                 
                 
