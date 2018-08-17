@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
 node {
-  stage('compile') {
+  stage('Building code') {
   }
 }
