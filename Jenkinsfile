@@ -10,7 +10,7 @@ stage ('Testing code') {
       test ('CucumberTests')
   }, JUnitTests: {
     test ('JUnit Tests')
-  }, Jacoco Tests: {
+  }, JacocoTests: {
     test ('IntegrationTest')
   }
  }
