@@ -11,11 +11,12 @@ pipeline {
 
                 stage ('Building code') {
                         steps {
-                                job('hello-world-dsl') {
-   steps {
-     shell("echo 'Hello World!'")
-   }
-}
+                                job ("aaa") {
+                                        steps {
+                                                echo "aaa"
+                                        }
+                                }
+                                
                                 echo "Building code"
                         }
                 }
