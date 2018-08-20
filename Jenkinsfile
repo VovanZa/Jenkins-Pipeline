@@ -38,8 +38,13 @@ pipeline {
                 }
 
                 stage ('Asking for manual approval') {
+                        input {
+                                message "Deploy artefact?"
+                                ok "Yes, deploy"
+                        }        
                         steps {
                                 echo "Asking for manual approval"  
+                                echo "Yes, deploy artefact"
                         }
                 }
                 
