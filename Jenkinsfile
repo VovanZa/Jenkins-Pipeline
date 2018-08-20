@@ -11,6 +11,11 @@ pipeline {
 
                 stage ('Building code') {
                         steps {
+                                job('hello-world-dsl') {
+   steps {
+     shell("echo 'Hello World!'")
+   }
+}
                                 echo "Building code"
                         }
                 }
@@ -38,13 +43,13 @@ pipeline {
                 }
 
                 stage ('Asking for manual approval') {
-                        input {
-                                message "Deploy artefact?"
-                                ok "Yes, deploy"
-                        }        
+//                        input {
+//                                message "Deploy artefact?"
+//                                ok "Yes, deploy"
+//                        }        
                         steps {
                                 echo "Asking for manual approval"  
-                                echo "Yes, deploy artefact"
+//                                echo "Yes, deploy artefact"
                         }
                 }
                 
