@@ -8,6 +8,12 @@ pipeline {
                                 echo "Preparation (Checking out)"
                         }
                 }
+
+                stage ('Building code') {
+                        steps {
+                                echo "Building code"
+                        }
+                }
                 
                 stage ('Testing code') {
                         steps {
