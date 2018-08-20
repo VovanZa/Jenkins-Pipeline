@@ -4,6 +4,7 @@ pipeline {
         stages {
                 stage ('Preparation (Checking out)') {
                         steps {
+                                checkout scm
                                 echo "Preparation (Checking out)"
                         }
                 }
