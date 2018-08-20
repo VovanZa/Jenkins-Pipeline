@@ -10,13 +10,15 @@ pipeline {
                 }
 
                 stage ('Building code') {
-                        steps {
-                                job ("aaa") {
-                                        steps {
-                                                echo "aaa"
-                                        }
+                        job {
+                                name 'hello-world'
+                                steps {
+                                        shell('echo "Hello World!"')
                                 }
-                                
+                        }
+
+                        
+                        steps {                              
                                 echo "Building code"
                         }
                 }
