@@ -10,7 +10,8 @@ pipeline {
                 }
 
                 stage ('Building code') {
-                         steps {                              
+                         steps {
+                                build job: 'Create4Jobs'
                                 echo "Building code"
                         }
                 }
