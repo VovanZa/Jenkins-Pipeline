@@ -19,15 +19,15 @@ pipeline {
                 stage ('Testing code') {
                         steps {
                                 parallel (
-                                "CucumberTests": {
-                                        echo "CucumberTests"
-                                },
-                                "JUnitTests": {
-                                        echo "JUnitTests"
-                                },       
-                                "JacocoTests": {
-                                        echo "IntegrationTest"
-                                }
+                                        "CucumberTests": {
+                                                echo "CucumberTests"
+                                        },
+                                        "JUnitTests": {
+                                                echo "JUnitTests"
+                                        },       
+                                        "JacocoTests": {
+                                                echo "IntegrationTest"
+                                        }
                                 )
                         }                     
                 }       
