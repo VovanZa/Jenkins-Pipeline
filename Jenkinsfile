@@ -2,7 +2,7 @@ pipeline {
         agent any
         
         tools {
-                gradle "GRADLE_LATEST"
+                gradle "gradle4.9"
         }
         stages {
                 stage ('Preparation (Checking out)') {
