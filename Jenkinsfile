@@ -20,6 +20,7 @@ pipeline {
                         steps {
                                 parallel (
                                         "CucumberTests": {
+                                                sh './gradlew clean build cucumber'
                                                 echo "CucumberTests"
                                         },
                                         "JUnitTests": {
