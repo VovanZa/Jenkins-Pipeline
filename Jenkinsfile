@@ -24,7 +24,7 @@ pipeline {
                                 parallel (
                                         "CucumberTests": {
                                                 sh 'gradle --version'
-                                                sh 'gradle clean build cucumber'
+                                                sh 'gradle cucumber'
                                                 echo "CucumberTests"
                                         },
                                         "JUnitTests": {
