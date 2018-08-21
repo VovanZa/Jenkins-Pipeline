@@ -1,6 +1,9 @@
 pipeline {
         agent any
         
+        tools {
+                gradle "GRADLE_LATEST"
+        }
         stages {
                 stage ('Preparation (Checking out)') {
                         steps {
@@ -20,6 +23,7 @@ pipeline {
                         steps {
                                 parallel (
                                         "CucumberTests": {
+                                                sh 'gradle --version'
                                                 sh './gradlew clean build cucumber'
                                                 echo "CucumberTests"
                                         },
